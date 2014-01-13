@@ -13,6 +13,7 @@ class HelloWorld {
     void say_goodbye() const;
 
   private:
+    // See ../valgrind for an example using raw pointers.
     struct HelloWorldImpl;
     std::unique_ptr<HelloWorldImpl> pImpl;
 };
