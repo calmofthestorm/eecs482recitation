@@ -1,0 +1,50 @@
+git_local:
+  git clone git@github.com:eecs482/aroper.0
+  write hello world
+  status
+  diff
+  add hello world
+  diff --cached
+  commit
+
+git_remote:
+  git clone git@github.com:calmofthestorm/example1.git repo1
+  git clone git@github.com:calmofthestorm/example1.git repo2
+
+  git clone git@github.com:calmofthestorm/example2.git repo1
+  git clone git@github.com:calmofthestorm/example2.git repo2
+
+  vanilla/strawberry
+  pink/green
+
+  commit each
+
+  pull
+
+pimpl:
+  Briefly touch on the unique pointer dtor issue
+  Mention how it works with a dumb pointer
+  Mention const issue
+
+valgrind:
+  Go over pimpl again
+  memory leak
+  g ggdb
+
+static:
+  mention bad style instance call
+
+gdb:
+  NOTE: to build this you need to copy in the files from project1 (cpu.h, cv.h, mutex.h, thread.h, libcpu.a, thread.o)
+  (r)un
+  break <place>
+  (c)ontinue
+  (s)tep
+  (n)ext
+  bt
+  info threads
+  thread
+  thread apply all bt
+
+  enter to repeat
+  handle
