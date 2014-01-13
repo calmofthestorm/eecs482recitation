@@ -1,0 +1,3 @@
+* Briefly touch on the unique pointer dtor issue
+* Mention how it works with a dumb pointer
+* Mention const issue
