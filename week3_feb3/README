@@ -1,0 +1,6 @@
+Some examples of simple programs using ucontexts. Hopefully useful for doing
+project two.
+
+Challenge problem: I'm 99% sure that you can implement the Y combinator using
+get/set/make/swap context. I can't offer any extra credit, but if you get one
+working I'll bake you cookies or something because that would be super awesome!
