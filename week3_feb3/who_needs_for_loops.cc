@@ -30,11 +30,7 @@ void for_loop(int count) {
     setcontext(&body_context);
   }
 
-  // Otherwise, fall through to the loop context's uc_link, which is
-  // loop_done_context. Uncommenting the below would not change the
-  // effect.
-
-  // setcontext(&loop_done_context);
+  setcontext(&loop_done_context);
 }
 
 int main() {
@@ -52,7 +48,7 @@ int main() {
   }
 
   // When the loop is done, restore this context.
-  loop_context.uc_link = &loop_done_context;
+  loop_context.uc_link = nullptr;
 
   // Set the loop context so that when it is activated we call the function
   // for_loop with 1 argument, 10. fun fact: did you know that the ability of
