@@ -1,0 +1,3 @@
+This is an interesting article about teaching students programming, and how we as teachers can do better to explain why we use the seemingly archaic masochistic tools we use (case in point I am writing this in VIM). Although most of the article is advice for teachers, I feel like it does a decent explanation of the benefits (and drawbacks) of commonly used open source development tools.
+
+http://pgbovine.net/two-cultures-of-computing.htm
