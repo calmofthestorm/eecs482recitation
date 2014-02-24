@@ -1,0 +1,13 @@
+Just some rough order of magnitude numbers for context switch!
+
+Intel 5150: 105ns/syscall
+Intel E5440: 87ns/syscall
+Intel E5520: 58ns/syscall
+Intel X5550: 52ns/syscall
+Intel L5630: 58ns/syscall
+Intel E5-2620: 67ns/syscall
+
+(http://blog.tsunanet.net/2010/11/how-long-does-it-take-to-make-context.html)
+
+Proof earliest-deadline-first is optimal:
+http://www.cs.fsu.edu/~baker/realtime/restricted/notes/edfscheduling.html
