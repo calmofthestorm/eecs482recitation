@@ -1,0 +1,20 @@
+EECS 482 Is fundamentally a course about operating systems. While I don't want
+us to get into C++, or too caught up in style, where this intersects a real
+problem in operating systems (memory leaks) I feel it bears mentioning.
+
+Many of your thread libraries exhibited memory leaks. to be clear, we are not
+concerned with memory that will be immediately reclaimed (such as leaking the
+first thread when there is an error condition in cpu::init), nor with memory
+that is used through the entire length of your program (such as the cpu::impls)
+
+Memory leaks we are concerned with are leaks which will continue to grow as
+your program runs. For example, if you fail to free the stacks after threads
+exit.
+
+Memory leaks do not even need to (directly) involve the heap at all. For
+example, if you keep an STL structure such as a map or a vector containing
+pointers to threads, and never remove elements from it, this is a memory leak
+even though the memory remains reachable throughout the program lifetime.
+
+I would like to address several common mistakes in project two, as well as
+several different solutions to address them.
