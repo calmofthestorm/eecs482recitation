@@ -1,0 +1,7 @@
+infile format:
+
+first line a number 0-(size - 1) indicating which ENTRY in the file (NOT which
+page number) the clock hand points to.
+
+followed by SIZE lines:
+page_id ref_bit
