@@ -225,7 +225,7 @@ YetAnotherCorrectBadDesign::~YetAnotherCorrectBadDesign() {
 
 // ----------------------------------------------------------------------------
 
-// Hybrid design -- not as good as the last two, but can be done without
+// Hybrid design -- not as good as the final two, but can be done without
 // relying on unique_ptrs anywhere except the constructor, which may be
 // beneficial for working with legacy code.
 
@@ -286,3 +286,18 @@ class GoodDesign2 {
   std::unique_ptr<bool> some_bool;
 };
 
+// Take home message:
+// 0) Don't use a pointer to an X when a regular declaration will do (eg
+//    GoodDesign1 > GoodDesign2, all else being equal).
+// 1) Use unique_ptrs.
+// 2) Use unique_ptrs.
+// 3) Whenever you wish C++ had a finally, use RAII (like a unique_ptr).
+// 4) Use RAII.
+// 
+// If you MUST break 1-4 for some reason, remember:
+//
+// 5) Remember that if a constructor throws an exception, the destructor is not
+//    called. You need to clean up in the constructor.
+// 6) Remember that exceptions thrown by objects initialized in constructor
+//    lists can throw too, and you need that weird try / catch syntax to
+//    catch them.

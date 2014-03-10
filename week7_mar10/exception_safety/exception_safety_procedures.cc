@@ -46,6 +46,7 @@ int get_resources(my_struct* s) {
 // The (correct) C way 2 (less readable but avoids unnecessary calls to
 // malloc.) Notice how poorly this scales to allocating many things.
 int get_resources(my_struct* s) {
+  s->my_stack = NULL;
   s->my_queue = (std::queue<impl*>*)malloc(sizeof(std::queue<impl*>));
   if (s->my_queue) {
     s->my_stack = (char**)malloc(sizeof(char[STACK_SIZE]));
@@ -73,6 +74,7 @@ void get_resources(my_struct* s) {
   } catch (...) {
     delete s->my_queue;
     delete s->my_stack;
+    throw;
   }
 }
 
@@ -86,6 +88,7 @@ void get_resources(my_struct* s) {
   } catch (...) {
     delete s->my_queue;
     delete s->my_stack;
+    throw;
   }
 }
 
@@ -100,7 +103,7 @@ void get_resources(my_struct* s) {
   s->my_stack = the_stack.release();
 }
 
-// BEST C++ way: use smart pointers in do_stuff and my_struct. [not shown]
+// BEST C++ way: use smart pointers in do_stuff in my_struct. [not shown]
 
 // WHAT IS THIS I DON'T EVEN (but correct) C++ way
 // (needs #include <new>)
