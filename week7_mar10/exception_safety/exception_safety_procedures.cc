@@ -17,6 +17,9 @@ void do_stuff() {
 }
 
 // The (wrong) C way (leaks memory)
+// (for these C examples, note that using malloc to allocate STL structures
+// isn't ok. Let's temporarily pretend that it's ok for the purposes of these
+// examples only.
 int get_resources(my_struct* s) {
   s->my_queue = (std::queue<impl*>*)malloc(sizeof(std::queue<impl*>));
   s->my_stack = (char**)malloc(sizeof(char[STACK_SIZE]));
