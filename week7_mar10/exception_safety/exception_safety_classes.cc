@@ -284,7 +284,17 @@ class GoodDesign2 {
   std::unique_ptr<std::unordered_map<int, impl*>> some_map;
   std::unique_ptr<int> some_int;
   std::unique_ptr<bool> some_bool;
+
+  public:
+    GoodDesign2();
 };
+
+
+GoodDesign2::GoodDesign2()
+: some_queue(new std::queue<impl*>),
+  some_map(new std::unordered_map<int, impl*>),
+  some_int(new int(3)),
+  some_bool(new bool(false)) { }
 
 // Take home message:
 // 0) Don't use a pointer to an X when a regular declaration will do (eg
@@ -294,10 +304,13 @@ class GoodDesign2 {
 // 3) Whenever you wish C++ had a finally, use RAII (like a unique_ptr).
 // 4) Use RAII.
 // 
-// If you MUST break 1-4 for some reason, remember:
+// If you MUST break 1-4 for some reason:
 //
 // 5) Remember that if a constructor throws an exception, the destructor is not
 //    called. You need to clean up in the constructor.
 // 6) Remember that exceptions thrown by objects initialized in constructor
 //    lists can throw too, and you need that weird try / catch syntax to
 //    catch them.
+// 7) HOWEVER, if a ctor throws an exception, all of its member varables WILL
+//    have THEIR dtors run -- which is why GoodDesign2 works -- if any of the
+//    news throws, all the unique_ptrs will have their destructors called.
