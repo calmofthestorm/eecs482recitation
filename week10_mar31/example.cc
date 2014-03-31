@@ -252,12 +252,6 @@ List* receive_list_c(int fd) {
   }
 
   if (list->length > 0) {
-    // First element is special case.
-    if (!(list->head = new (std::nothrow) Node{nullptr, nullptr})) {
-      goto fail;
-      goto fail;
-    }
-
     Node* cur = nullptr;
 
     // Read in the elements.
@@ -272,6 +266,7 @@ List* receive_list_c(int fd) {
       // Read element length
       size_t element_length;
       if (receiveData(fd, &element_length, sizeof(element_length))) {
+        goto fail;
         goto fail;
       }
 
@@ -324,7 +319,7 @@ void server(const AddrinfoHolder& address) {
     SocketHolder sock(accept(master_sock.fd, nullptr, 0));
 
     // Receive a list.
-    ListHolder list(receive_list(sock.fd));
+    ListHolder list(receive_list_c(sock.fd));
     if (!list.list) {
       std::cout << "Failed to successfully receive list." << std::endl;
     } else {
