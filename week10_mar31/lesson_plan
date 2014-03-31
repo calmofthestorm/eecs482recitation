@@ -1,0 +1,18 @@
+anatomy of a program in memory
+
+RPC mini-lecture
+  Write C on exams (no need to error check unless told explicitely)
+  Write C++ on projects
+  Write C++ in real world. No excuse for memory leaks in C++. Period.
+  Note: By C++ I don't mean OOP. I mean RAII. OOP is optional. RAII is not.
+  json
+  protobuf
+
+p4 hints
+  sscanf/re
+  fs is hard
+    consider investing some time into support tools (FS lib/fuzzer).
+    test suite coverage
+    your tests != our tests
+
+homework
