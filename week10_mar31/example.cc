@@ -172,9 +172,6 @@ List* receive_list(int fd) {
   }
 
   if (list->length > 0) {
-    // First element is special case.
-    list->head = new Node{nullptr, nullptr};
-
     Node* cur = nullptr;
 
     // Read in the elements.
@@ -212,9 +209,6 @@ List* receive_list_c_noerrorchecking(int fd) {
   assert(!receiveData(fd, &list->length, sizeof(list->length)));
 
   if (list->length > 0) {
-    // First element is special case.
-    assert((list->head = new (std::nothrow) Node{nullptr, nullptr}));
-
     Node* cur = nullptr;
 
     // Read in the elements.
