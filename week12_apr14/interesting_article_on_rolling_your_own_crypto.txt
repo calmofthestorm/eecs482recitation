@@ -1,0 +1,8 @@
+Just read the headline, the article itself is cute but has a very high
+words-to-content-ratio:
+
+If You're Typing The Letters A-E-S Into Your Code, You're Doing It Wrong
+(don't roll your own crypto unless absolutely, positively, necessary and
+after like five million code reviews)
+
+http://www.cs.berkeley.edu/~daw/teaching/cs261-f12/misc/if.html

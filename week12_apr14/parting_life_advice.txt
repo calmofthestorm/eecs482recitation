@@ -1,0 +1,228 @@
+On getting a PhD
+  Consider a few years in industry first unless you are going for tenure track at R1 school/lab...and possibly even then.
+  IN CS a PhD is good if you want to:
+    teach
+    do research (either academia or pure research industry)
+    learn how to do original research
+    have enough rope to hang yourself by
+    pivot to non-technical/less technical roles (CTO, chief data scientist, consulting, etc)
+      probably not the best way to do that, but it is a way
+    want to become super hyper mega specialized
+  not good if you
+    want to write code
+    have an awesome world changing idea
+      chances are it's not "novel"
+    want to learn to code better
+    want to learn new things(!) [outside one narrow area]
+    want to build big systems at a higher level than entry level SE (work exp/startup better use of time than PhD for this)
+    want to be called "doctor" (by the time you graduate you'll tell students to use your first name anyway)
+    want to be either a generalist or a specialist (!)
+    want more money
+  No matter what, do not get a CS PhD from a school that won't guarantee you funding for at least 5 years.
+  NEVER pay for a CS PhD. They should pay you and provide basic benefits [healthcare].
+  Remember the graduation rate is ~50%.
+  Don't apply the above advice to other fields, esp. not non-STEM. Completely different world in terms of how PhD works/what you need it to do. I know nothing about them.
+  None of this applies to masters, professional grad degrees (JD, MD, etc) -- night and day different.
+
+Health/Ergonomics
+  Make ergonomics a priority NOW.
+  Most people who get wrist problems are fine (read: full recovery) if they take prompt, decisive action.
+  When the pain starts don't ignore it. Act immediately. Be prepared for it to appear suddenly, going from nothing to debilitating in days.
+  Know your family history. Any inflammation diseases (diabetes, etc), these tips go double.
+
+  Easy changes you can make today:
+    Don't use laptop keyboard for extended periods
+    Get any full-size external keyboard and any external mouse. Don't need to be nice/ergonomic.
+      Code in CAEN labs if you want, those are pretty nice keyboards
+    Sit up straight (prop your back with a towel if you want, I do this)
+    When not actively typing, keep hands off keyboard, in lap, relaxed.
+    Sleep with stabilizing wrist braces
+    Try not to "bottom out" -- don't strike keys too hard.
+    Don't chord (multiple keys per hand at a time). Emacs users should consider evil.
+
+  Harder/More Expensive changes
+    Dictation software for prose/email/etc (dragon naturally speaking windows edition, others suck)
+      You probably want to run Windows edition in a VM if on mac/linux.
+      Shameless plug: https://github.com/calmofthestorm/aenea
+    Get a nice keyboard (I'm partial to Kinesis advantage, Justin likes the Ergodox, my friend likes the Freestyle 2)
+    Get a nice mouse (handshake mouse is nice). No specific recommendation because I don't use the mouse much.
+    Learn dvorak -- it's not faster but it feels a LOT better
+      you won't forget QWERTY and basically every computer has it installed
+      there are better layouts but they're not in EVERY OS EVER already.
+      Takes less time than you think
+        1-2 months back to full speed
+        You can be productive in it in two weeks.
+
+    Standing desks are awesome.
+    Don't hold bags by handles. In general, avoid prolonged tension in hands.
+    Try to minimize use of phones/tablets -- hard to imagine worse ergonomics.
+
+Text editors/IDEs
+  learn 1 text editor really well (i like modal/VIM)
+    Most of this goes equally for emacs, though it's a bit more friendly to newbies.
+    General advice: Learn a tool well and became a master of it. For my friends in finance that's Excel.
+  Don't pick your text editor based on what will impress people.
+  You don't need to be 1337 with a steep learning curve complex editor to be a strong/efficient programmer. Ignore those who tell you otherwise.
+  That said, it does help.
+  If you're not going to put in the time to learn it well, don't use VIM for coding.
+  Just using VIM but always hanging out in insert mode won't make you any faster -- probably slower -- than gedit/notepad++
+  Use the arrow keys if you want, hjkl is not what VIM's about.
+  90% of VIM users only use basic functionality and would be better off with something like Sublime.
+  VIM is great editor, lacks a decent OS
+  Emacs is great OS, lacks a decent editor (though some of my friends use EVIL with it and love it)
+  Sublime -- just use this if you don't want to learn VIM/emacs, which require a fair bit of setup to be productive.
+  VIM
+    I know vim pretty well. For four years I spent all my time in insert mode and
+    would have been better off with gedit.
+      I LOVE IT SO MUCH ZOMG. Seriously.
+      Getting good takes less time than you think.
+    To learn VIM
+      http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
+      go through vimtutor, then just start using it. You don't need to disable arrow keys/mouse or go cold turkey.
+      Print out a cheat sheet and try to integrate commands into your daily work.
+        Don't worry if you forget things. Cold turkey = give up at first deadline
+        http://tnerual.eriogerg.free.fr/vim.html
+        http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+      Integrate it into your routine a bit at a time, at a slow but constant pace.
+      VIM is a language for editing, not a collection of shortcuts:
+        Wrong way: gqap reformats a chunk of text
+        Right way: gq = format text, ap = act on a paragraph
+        Very different from most other software -- think programming, not shortcuts.
+    Plugins
+      If you're not willing to spend a few hours customizing and pluginizing, don't try to code in vim on large projects
+        Vanilla fine for quick edits and small projects) 
+      Installing VIM plugins is super easy now, use Vundle.
+      I have my dotfiles on github if interested (I do C++ and Python mostly).
+        at a bare minimum YouCompleteMe, LustyJuggler, Syntastic, Vundle, Ultisnips, Command-T
+          (or similar)
+      I also love the multiple cursors plugin terryma/vim-multiple-cursors
+      Don't go crazy on plugins -- start with those few and ask yourself what you wish it did, then get it to do that.
+    Overall, modal editing is fantastic, but VIM itself shows its age, and lacks good IDE type features
+      AFAIK no existing superior alternatives.
+      This includes modern IDEs -- they have their strong points but not enough to compensate for all the headaches getting them to work
+      and atrocious built-in editors.
+        If you love vim, look at viemu for vim-editing in MS office and Visual Studio
+          Not free, but there is student discount and license is per-person per life.
+          Supports nearly all VIM commands, none of this just hjkl nonsense some programs tout as "vim mode".
+    I look at new age modal editors like Sublime's viper, github atom vim bindings, E, and neovim with interest, but none are compelling yet.
+  IDEs are overrated, even for large codebases.
+    If one works for you, sure, but if you try it and it isn't working out,
+    don't feel like you're a poor programmer for going back to a text editor.
+    Think of UNIX shell is an IDE and VIM is its editor.
+  Different tools work for different people. Don't judge a person by their tools, judge by their work.
+  Different workstyles work for different people.
+    The fact that someone does their best work by pairing/working alone/etc does not make them a better/worse engineer
+
+Career
+  I just want to come in every day, write software, learn new things, talk shop about computers, and make enough to live on.
+    Unfortunately, due to how the world works I'm forced to spend time/energy playing career dev, networking, etc.
+      If you just want to do your thing and be left alone, you still have to play the game.
+
+  If you only negotiate hard once, it should be your first FT job out of college
+    Salary here will peg your salary for rest of life
+    Do this even if you don't care about money.
+    The only way you negotiate in SE is by getting better offers elsewhere.
+      Never hurts to ask though
+    Places are typically more willing to give on equity/options/bonuses than salary (see point 1)
+    If you're one of those folks who cares about huge amounts of money, expect to change jobs a lot.
+      Beware a recession, in which "job hoppers" may be looked down upon.
+
+  Consider whether you want to be a specialist or a generalist. The former get paid better, but had
+    better hope their tech doesn't get obsolete and have a harder time finding jobs. The latter are
+    more replaceable. I consider myself a generalist, though I don't know JS so maybe I'm wrong;)
+    Decide by age 30 or so.
+
+  Especially 20-30, but your entire career, you need to always be learning new things.
+    Try to strike a balance between interesting to you and "hot" technologies.
+    This happens both at work and on your own time.
+    Easy to land job at Big Company, coast for two decades, realize not employable anymore.
+    You don't need to chase every fad, but I'd at least know what they are.
+
+  Networking is everything. Nearly all jobs are found this way. I don't like it,
+    and I'm not saying it's fair, but it is life. Unless you have 50 years Node.js
+    experience to get past clueless HR screens, networking is the only sane way in
+    at a lot of places.
+
+    It costs your friend/co-worker nothing (and may net them a bonus) to kick your
+    resume along. Never hurts to ask.
+
+    Don't be afraid to ask for reference, referral; most people will say no
+      rather than pan you.
+
+  People skills matter and can be learned.
+    Lack of natural talent is not an excuse.
+    You can get pretty far by being kind, humble, blunt-but-polite, and smiling a lot.
+      This only gets truer as you get older.
+    Try to learn to project confidence without arrogance, very important for interviews.
+    When you make others look good you make yourself look good.
+    Don't build your own glory by tearing others down.
+
+  Respect
+    Sometimes I see a trend of saying there are two sorts of CS folks -- the names
+    vary, but it boils down to the competent (perpetually wise, talented, etc --
+    they were born that way) and the incompetent, who will never amount to anything.
+
+    This is, of course, bullshit. I agree there does tend to be a bimodal talent
+    of *any population at any point in time*, but some people study, learn, listen,
+    and become better. Likewise, others rest on laurels and become sloppy, outdated,
+    and arrogant.
+
+    No matter how good you are, you can always get better. Focus on learning from
+    those around you, and try not to judge others unless and until necessary (eg, you're
+    deciding whether to hire someone). Focus on mentoring and teaching those around
+    you, whether or not you think they know more than you. Trying to teach things
+    to others has, for me, exposed lack of understanding on my own part I was
+    later able to address.
+
+    Above all, be respectful of people at all levels of technical development.
+    That person who started coding at age 8 has maybe a 10 year head start on you.
+    That's overwhelming when you two are early 20s, but by age 40 it just won't
+    matter that much.
+
+    Remember that what works well for you (pair programming/editor/IDE/OS/etc) may not
+    work well for others. Try not to push your worldview on your co-workers,
+    but absolutely share your opinion, knowledge, etc.
+
+Fads
+  Our field is infested with them.
+  Good coders code, great reuse.
+  Most "new" technologies are reinventions of decades old ideas.
+    The good ones are modern reinventions that make it useful in a new context
+      MapReduce, reactor pattern (Node.js/twisted/etc), Ruby on Rails (MVC), etc
+    The bad ones are written by people who do not know what came before them.
+      Not naming names here because I want to stay employable, but let's just say
+      people would do well to read Stonebraker and Emin Gun Sirer's papers on NoSQL and NewSQL.
+    Don't be afraid to reinvent the wheel so long as you:
+      Know you're doing it
+      Learn from the past
+      Know why it'll be different this time or why existing tech won't work
+        (eg MapReduce back when it was written, commodity hardware + details of workload)
+
+Misc
+  Devote time and energy to getting better with your tools, whatever they may be.
+
+  Hard Work
+    There is no substitute for hard work
+    Hard work is no substitute for using a library/learning a new feature
+      If it's hard, first look to see if there's a better way or someone else already solved your problem.
+
+  The Wall
+    No matter how smart/talented you are, you will hit a wall at some point. Even the very best in the field.
+    The smarter/more talented you are, the later and harder the wall.
+    Once you do, all future gains will come from working harder, and smarter.
+      Being brilliant can actually hurt you here, if you're 30 the first time you have to work for something you want.
+    There are a few people who are just that smart, but most of the really talented people you see got there via many hours spent.
+      Relatedly, obsession can substitute for hard work up to a point, but sooner or later it gets in the way.
+
+  You already knew most of this advice...so why do I remind you? Because knowing is not acting.
+
+  There's a reason Google has internal Jeff Dean truths ala Chuck Norris Truths:
+    http://www.youtube.com/watch?v=modXC5IWTJI
+    (slides): http://research.google.com/people/jeff/stanford-295-talk.pdf
+
+  Also everything pgbovine ever wrote: http://www.pgbovine.net/
+    Seriously Philip Guo is a genius and I'm not just talking about his research.
+
+  Also Richard Feynman's Caltech commencement address from 1974: http://neurotheory.columbia.edu/~ken/cargo_cult.html
+
+  Also, The Planatary Datalinks: http://www.youtube.com/watch?v=iY57ErBkFFE
