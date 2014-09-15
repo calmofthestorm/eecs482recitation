@@ -303,14 +303,17 @@ GoodDesign2::GoodDesign2()
 // 2) Use unique_ptrs.
 // 3) Whenever you wish C++ had a finally, use RAII (like a unique_ptr).
 // 4) Use RAII.
+// 5) Unique pointers are NOT a complete panacea -- see http://herbsutter.com/gotw/_102/
+//    for an example of exception unsafe use of UPs. This can be alleviated
+//    with C++14's make_unique.
 // 
 // If you MUST break 1-4 for some reason:
 //
-// 5) Remember that if a constructor throws an exception, the destructor is not
+// 6) Remember that if a constructor throws an exception, the destructor is not
 //    called. You need to clean up in the constructor.
-// 6) Remember that exceptions thrown by objects initialized in constructor
+// 7) Remember that exceptions thrown by objects initialized in constructor
 //    lists can throw too, and you need that weird try / catch syntax to
 //    catch them.
-// 7) HOWEVER, if a ctor throws an exception, all of its member varables WILL
+// 8) HOWEVER, if a ctor throws an exception, all of its member varables WILL
 //    have THEIR dtors run -- which is why GoodDesign2 works -- if any of the
 //    news throws, all the unique_ptrs will have their destructors called.
